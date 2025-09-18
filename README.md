@@ -1,1 +1,1 @@
-# pi-grupo-16
+#Proyecto integrador grupo 16, es una tienda de productos deportivos de boca realizada por Mateo Cespedes, Martin Decillo y Nicolas Sanchez. El codigo esta conformado por html y css.

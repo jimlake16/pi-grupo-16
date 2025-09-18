@@ -1,0 +1,46 @@
+.body{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    width: 90%;
+    border-radius: 25px;
+
+}
+
+.logo{
+    font-size: x-large;
+    color: yellow;
+    text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: large;
+    
+}
+
+.nav li{
+    text-decoration: none;
+    margin: 20px;
+
+}
+.nav li a{
+    text-decoration: none;
+    color: yellow;
+}
+
+.auth-buttons a{
+    text-decoration: none;
+    color: yellow;
+    margin: 10px;
+}
