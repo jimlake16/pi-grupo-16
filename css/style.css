@@ -2,6 +2,8 @@
     background-color: lightgray;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header{
@@ -43,4 +45,87 @@
     text-decoration: none;
     color: yellow;
     margin: 10px;
+}
+
+/* hasta aca llega el header */
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-self: center;
+}
+
+.categorias{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 20px;
+    width: 20%;
+    height: 600px;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+.categorias-lista {
+    list-style: none;
+}
+
+.categorias-lista li {
+    margin: 10px 0;
+}
+
+.categorias-lista li a {
+    text-decoration: none;
+    color:grey
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+/* productos destacados */
+
+.productos-destacados{
+    display: flex;;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.productos-destacados article {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 220px;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.productos-destacados img {
+    width: 190px;
+    height: 190px;
+    border-radius: 5px;
+}
+
+.productos-destacados h4 {
+   color: black;
+   margin: 10px 0 5px 0;
+}
+
+.footer {
+    background-color: blue;
+    color: yellow;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 20px;
 }
