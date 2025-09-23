@@ -177,3 +177,69 @@ h2 {
   font-weight: bold;
   border: none;
 }
+.register-page {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+.register-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  border: 2px blue;
+}
+.register-container h2 {
+  margin-bottom: 20px;
+  color: blue;
+}
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+.register-container input,
+.register-container button {
+  margin-bottom: 15px;
+}
+.register-container input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.checkbox-container input {
+  margin-right: 8px;
+}
+.register-container button {
+  padding: 12px;
+  background-color: blue;
+  color: gold;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+}
+/* Test de hover, es para pasar el mouse y ver al club mas grande dorado */
+.alt-link a:hover {
+  color: gold;
+}
