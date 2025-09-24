@@ -154,7 +154,7 @@
    margin-left: 15px;
    margin-right: 15px;
 }
-
+/* footer */
 .footer {
     background-color: blue;
     color: yellow;
@@ -165,6 +165,19 @@
     margin-top: 20px;
 }
 
+.nombres{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+
+}
+
+.nombres li{
+    margin: 10px;
+    list-style: none;
+    text-align: center;
+}
 /* login (ACOMODAR ESTO) */
 
 .login-page {
@@ -277,3 +290,109 @@
   border: none;
   border-radius: 8px;
 }
+
+
+/* detalle producto */
+
+.main-producto {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-self: center;
+}
+
+.producto-detalle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.producto-info {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.producto-imagen {
+  margin-right: 30px;
+}
+
+.producto-imagen img {
+  width: 500px;
+  height:500px;
+  border-radius: 10px;
+}
+
+.producto-tags{
+    display: flex;
+    flex-direction: row;
+}
+.producto-tags ul{
+    display: flex;  
+}
+.producto-tags ul li{
+    margin: 20px;
+}
+
+.producto-datos {
+  display: flex;
+  flex-direction: column;
+}
+
+.producto-datos h1 {
+  color: blue;
+  margin-bottom: 20px;
+}
+
+
+.stock-disponible {
+  color: green;
+}
+
+.producto-precio {
+  font-size: x-large;
+  color: blue;
+  background-color: yellow;
+  border-radius: 8px;
+  border: 2px solid blue;
+  text-align: center;
+  width: 200px;
+}
+
+.producto-descripcion {
+  margin: 20px 0;
+}
+
+.producto-descripcion h3 {
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.reviews-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.reviews-section h3 {
+  color: blue;
+  border-bottom: 2px solid blue;
+  padding: 20px;
+}
+
+.review-item {
+  border-bottom: 1px solid grey;
+  padding: 20px 0;
+}
+
+.review-usuario {
+  color: blue;
+}
+
+.review-rating {
+  color: #ffd700;
+}
+/* termina la pag detalle */
