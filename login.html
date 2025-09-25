@@ -7,16 +7,56 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="body">
-  <main class="login-page">
-    <div class="login-container">
-      <h2>Iniciar sesión</h2>
-      <form id="loginForm" action="index.html" method="get">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Contraseña">
-        <button type="submit">Ingresar</button>
+
+      <header class="header">
+        <a href="/index.html" class="logo"><span>Azul y Oro <br> Store</span></a>
+       
+        <form class="buscador">
+            <input type="text" placeholder="Buscar productos...">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div class="auth-buttons">
+                <a href="./login.html" class="login">LOGIN</a>
+                <a href="./register.html" class="register">REGISTRO</a>
+        </div>
+    
+      </header>
+    
+    
+    
+
+    <div class="login-register-contenido , login-2"> 
+
+      <form action="index.html" method="GET">
+      
+        <h2>Iniciar sesión</h2>
+
+        <div>
+          <input type="email" name="email" value="" placeholder="Email">
+        </div>
+        <div>
+          <input type="password" name="password" value="" placeholder="Contraseña">
+        </div>
+        <div>
+          <button type="submit">Ingresar</button>
+        </div>
+
+        <p><a href="register.html">No tengo cuenta</a></p>
+
       </form>
-      <p><a href="register.html">No tengo cuenta</a></p>
+
     </div>
-  </main>
+
+    <footer class="footer">
+
+        <ul class="nombres">
+            <li>Mateo Cespedes</li>
+            <li>Martin Decillo</li>
+            <li>Nicolas Sanchez</li>
+        </ul>
+    </footer>
+
 </body>
 </html>
+

@@ -178,119 +178,49 @@
     list-style: none;
     text-align: center;
 }
-/* login (ACOMODAR ESTO) */
 
-.login-page {
-  display: flex;
-  justify-content: center;   
-  align-items: center;       
-  height: 100vh;
-  background-color: blue;
-}
-.login-container {
-  background: #ffffff; 
-  padding: 32px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 350px;
-  text-align: center;
-  border: 2px solid #004aad; 
-}
-.login-container h2 {
-  margin-bottom: 20px;
-  color: #004aad; 
-}
-.login-container form {
-  display: flex;
-  flex-direction: column;
-}
-.login-container input,
-.login-container button {
-  margin-bottom: 15px;
-}
-.login-container input {
-  padding: 13px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-}
-.login-container button {
-  padding: 13px;
-  background-color: #004aad; 
-  color: #FFD700;           
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-}
+/* login y register */
 
 
-
-
-
-/* REGISTRO (ACOMODAR)))))))) */
-
-.register-page {
-  height: 100vh;
+.login-register-contenido {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
-}
-
-.register-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-}
-.register-container {
-  background: #ffffff;
-  padding: 20px;
+  background:white; 
+  padding: 35px;
   border-radius: 12px;
-  width: 100%;
-  max-width: 350px;
+  width: 350px;
   text-align: center;
-  border: 2px blue;
-}
-.register-container h2 {
-  margin-bottom: 20px;
-  color: blue;
-}
-.register-container form {
-  display: flex;
-  flex-direction: column;
-}
-.register-container input,
-.register-container button {
-  margin-bottom: 15px;
-}
-.register-container input {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-}
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  margin-bottom: 15px;
-  color: #333;
-}
-.checkbox-container input {
-  margin-right: 8px;
-}
-.register-container button {
-  padding: 12px;
-  background-color: blue;
-  color: gold;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
+  border: 2px solid blue;
+  margin-top: 50px;
+  margin-bottom: 110px;
 }
 
+
+.login-register-contenido h2 {
+  margin-bottom: 30px;
+  color: blue; 
+}
+
+.login-register-contenido input {
+  padding: 15px;
+  border: 1px solid blue;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.login-register-contenido button {
+  padding: 15px;
+  background-color: blue; 
+  color: yellow;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+
+.login-2 {
+  margin-bottom: 160px;
+}
 
 /* detalle producto */
 

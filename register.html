@@ -6,21 +6,68 @@
     <title>Registro</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="register-page">
-    <div class="register-wrapper">
-    <div class="register-container">
-    <h2>Registro</h2>
-    <form action="login.html" method="post">
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="password" placeholder="Contraseña" required>
-      <input type="password" name="repeat-password" placeholder="Repetir contraseña" required>
-      <label class="checkbox-container">
-        <input type="checkbox" name="terms" required>
+<body class="body">
+
+  <header class="header">
+
+    <a href="/index.html" class="logo"><span>Azul y Oro <br> Store</span></a>
+       
+    <form class="buscador">
+      <input type="text" placeholder="Buscar productos...">
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="auth-buttons">
+      <a href="./login.html" class="login">LOGIN</a>
+      <a href="./register.html" class="register">REGISTRO</a>
+    </div>
+    
+  </header>
+
+
+  <div class="login-register-contenido"> 
+
+    <form action="index.html" method="GET">
+
+        <h2>Registrarse</h2>
+
+      <div>
+        <input type="email" name="email" value="" placeholder="Email">
+      </div>
+
+      <div>
+        <input type="password" name="password" value="" placeholder="Contraseña">
+      </div>
+
+      <div>
+        <input type="password" name="repeat-password" value="" placeholder="Repetir contraseña">
+      </div>
+
+      <label>
+        <input type="checkbox" name="terms">
         Acepto términos y condiciones
       </label>
-      <button type="submit">Registrarme</button>
+
+      <div>
+        <button type="submit">Registrarme</button>
+      </div>
+
+      <p><a href="login.html">Ya tengo una cuenta</a></p>
+
     </form>
-    <p><a href="login.html">Ya tengo una cuenta</a></p>
+
   </div>
+
+
+  <footer class="footer">
+
+   <ul class="nombres">
+      <li>Mateo Cespedes</li>
+      <li>Martin Decillo</li>
+      <li>Nicolas Sanchez</li>
+    </ul>
+
+  </footer>
+
 </body>
 </html>
