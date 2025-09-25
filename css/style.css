@@ -165,7 +165,6 @@
     justify-content: center;
     flex-direction: row;
     margin: 10px;
-
 }
 
 .nombres li{
@@ -250,6 +249,10 @@
   border-radius: 10px;
 }
 
+.producto-caracteristicas li{
+  margin: 20px;
+    
+}
 .producto-tags{
     display: flex;
     flex-direction: row;
@@ -330,4 +333,96 @@
     padding: 20px;
     border-radius: 10px;
     border: 2px solid yellow;
+}
+
+/* media queries celular */
+
+
+@media (max-width: 420px) {
+
+  .contenido-principal {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .productos-destacados {
+    width: 100%;
+
+  }
+
+  .productos-destacados article {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .buscador {
+    width: 80%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .categorias {
+    width: 100%;
+    height: 200px;
+}
+
+  .buscador {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+  .footer {
+    width: 90%;
+    text-align: center;
+  }
+
+  .nombres {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .login-register-contenido {
+    width: 70%;
+  }
+
+
+  .main-producto {
+    width: 90%;
+    align-self: center;
+  }
+
+  .producto-info {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .producto-datos {
+    width: 70%;
+    align-items: center;
+  }
+
+  .producto-imagen {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .producto-imagen img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .producto-tags ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
