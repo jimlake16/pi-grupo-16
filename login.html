@@ -11,14 +11,16 @@
       <header class="header">
         <a href="/index.html" class="logo"><span>Azul y Oro <br> Store</span></a>
        
-        <form class="buscador">
+         <form class="buscador" action="search-results.html" method="get">
             <input type="text" placeholder="Buscar productos...">
             <button type="submit">Buscar</button>
         </form>
 
         <div class="auth-buttons">
-                <a href="./login.html" class="login">LOGIN</a>
-                <a href="./register.html" class="register">REGISTRO</a>
+            <nav>
+                 <a href="./login.html" class="login">LOGIN</a>
+                 <a href="./register.html" class="register">REGISTRO</a>
+            </nav>
         </div>
     
       </header>
@@ -33,10 +35,10 @@
         <h2>Iniciar sesión</h2>
 
         <div>
-          <input type="email" name="email" value="" placeholder="Email">
+          <input type="email" name="email" value="" placeholder="Email" required>
         </div>
         <div>
-          <input type="password" name="password" value="" placeholder="Contraseña">
+          <input type="password" name="password" value="" placeholder="Contraseña" required>
         </div>
         <div>
           <button type="submit">Ingresar</button>
