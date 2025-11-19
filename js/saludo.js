@@ -1,23 +1,20 @@
-const userEmail = localStorage.getItem("emailUsuario");
+// Obtener email del usuario
+let userEmail = localStorage.getItem("emailUsuario");
 
-// Referencias DOM //
+// Referencias DOM
+let saludo = document.querySelector("#saludo-usuario");
+let linkLogout = document.querySelector("#logout");
+let linkLogin = document.querySelector("#linkLogin");
+let linkRegister = document.querySelector("#linkRegistro");
 
-const saludo = document.querySelector("#saludo-usuario");
-const linkLogout = document.querySelector("#logout");
-const linkLogin = document.querySelector("#linkLogin");
-const linkRegister = document.querySelector("#linkRegistro");
-
-// Para usuario logueado //
-
+// Para usuario logueado
 if (userEmail) {
     if (saludo) saludo.textContent = `Bienvenido: ${userEmail}`;
     if (linkLogout) linkLogout.style.display = "inline-block";
     if (linkLogin) linkLogin.style.display = "none";
     if (linkRegister) linkRegister.style.display = "none";
-}
-
-// Para usuario no logueado //
-
+} 
+// Para usuario no logueado
 else {
     if (saludo) saludo.textContent = "";
     if (linkLogout) linkLogout.style.display = "none";
