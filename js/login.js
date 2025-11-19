@@ -1,4 +1,3 @@
-
 //defino variables
 
 let validarForm = document.querySelector("#login");
@@ -36,3 +35,4 @@ validarForm.addEventListener("submit", function(e){
   // Guardar email en storage
   localStorage.setItem("emailUsuario", email);
  });
+
