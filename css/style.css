@@ -256,7 +256,7 @@
 }
 .producto-tags{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .producto-tags ul{
     display: flex;  

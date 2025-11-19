@@ -30,7 +30,7 @@ fetch(`https://dummyjson.com/products/${id}`)
 
         let categ = document.querySelector("#categ");
 
-        categ.innerHTML = "<strong>Categoría: </strong> <a href='category.html?category=" + data.category + "'>" + data.category + "</a>";
+        categ.innerHTML = "<strong>Categoría: </strong> <a href='category.html?category=" + data.category + "' style='text-decoration: none; color: black;'>" + data.category + "</a>";
 
 
         let stock = document.querySelector("#stock");
@@ -65,4 +65,53 @@ fetch(`https://dummyjson.com/products/${id}`)
         else {
             productTags.innerHTML = "";
         }
-    });
+
+
+
+
+    // REVIEWS
+
+    let reviewstotal = [];
+
+    if (data.reviews) {
+        reviewstotal = data.reviews;
+    }
+
+    for (let i = 0; i < reviewstotal.length; i++) {
+
+    let review = reviewstotal[i];
+
+   
+    let usuario = document.querySelector("#usuario" + (i+1));
+    usuario.innerText = review.reviewerName;
+
+    let comentario = document.querySelector("#comentario" + (i+1));
+    comentario.innerText = review.comment;
+
+  
+    let estrellas = "";
+    for (let estrella = 0; estrella < review.rating; estrella++) {
+        estrellas = estrellas + "⭐️";
+    }
+    
+    let puntuacion = document.querySelector("#estrellas" + (i+1));
+    puntuacion.innerText = estrellas;
+
+   
+    let fechaCom = review.date;
+    let fecha = "";
+    for (let ce = 0; ce < 10; ce++) {
+        fecha = fecha + fechaCom[ce];
+    }
+    
+    let f = document.querySelector("#fecha" + (i+1));
+    f.innerText = "Fecha: " + fecha;
+    }
+
+
+    })
+    .catch(function(error) {
+        console.log("Error al traer producto: ", error);
+});
+
+
