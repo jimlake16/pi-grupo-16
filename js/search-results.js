@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const searchForm = document.querySelector(".buscador");
     const searchInput = searchForm.querySelector("input");
-    const productsSection = document.querySelector(".productos-destacados");
-    const titleElement = document.querySelector(".titulo-productos");
+    const productsSection = document.getElementById("resultsContainer");
+    const titleElement = document.getElementById("searchTitle");
 
     // Crear loader
     const loader = document.createElement("p");
@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const initialTerm = urlParams.get("q");
     if (initialTerm) {
-        searchInput.value = initialTerm;
-        searchProducts(initialTerm);
-    }
+    searchInput.value = initialTerm;
+    searchProducts(initialTerm);
+}
 
     // Función para buscar productos
     async function searchProducts(term) {
