@@ -62,7 +62,7 @@ if (category1) {
         })
         .then(function(data) {
 
-            for(let i = 0; i<10; i++){
+            for(let i = 0; i< data.products.length; i++){
                 let producto1 = data.products[i];
 
                 products1 += `<article>
@@ -87,13 +87,13 @@ let products2 = "";
 
 if (category2) {
 
-    fetch('https://dummyjson.com/products/category/mens-shirts')
+    fetch('https://dummyjson.com/products/category/laptops')
         .then(function(response){
             return response.json();
         })
         .then(function(data) {
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < data.products.length; i++) {
                 let producto2 = data.products[i];
 
                 products2 += `<article>
