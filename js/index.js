@@ -39,7 +39,7 @@ if (listaCategorias) {
                 let categoria = data[i];
 
                 
-                listaCategorias.innerHTML += `<li><a href="./product.html?categoria=${categoria}">${categoria}</a></li>`;
+                listaCategorias.innerHTML += `<li><a href="./category.html?categoria=${categoria}">${categoria}</a></li>`;
             }
         })
         .catch(function(error) {
@@ -65,7 +65,7 @@ if (category1) {
             for(let i = 0; i<10; i++){
                 let producto1 = data.products[i];
 
-                products1 += `<article class="tarjeta-producto">
+                products1 += `<article>
                                 <img src="${producto1.images[0]}" alt="${producto1.title}">
                                 <h2>${producto1.title}</h2>
                                 <p>${producto1.description}</p>
@@ -93,10 +93,10 @@ if (category2) {
         })
         .then(function(data) {
 
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 5; i++) {
                 let producto2 = data.products[i];
 
-                products2 += `<article class="tarjeta-producto">
+                products2 += `<article>
                                 <img src="${producto2.images[0]}" alt="${producto2.title}">
                                 <h2>${producto2.title}</h2>
                                 <p>${producto2.description}</p>

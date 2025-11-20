@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul y Oro Store</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="body">
+    <header class="header">
+        <a href="/index.html" class="logo"><span>Azul y Oro <br> Store</span></a>
+       
+        <form class="buscador" action="search-results.html" method="get">
+            <input type="text" placeholder="Buscar productos...">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <div class="auth-buttons">
+            <p id="saludo-usuario"></p>
+            <nav>
+                <a href="./login.html" id="linkLogin" class="login">LOGIN</a>
+                <a href="./register.html" id="linkRegistro" class="register">REGISTRO</a>
+                <a href="#" id="logout" style="display:none;">Logout</a>
+            </nav>
+        </div>
+    
+    </header>
+
+    
+    <main class="main">
+     <nav class="categorias">
+        <h2 class="titulo-categorias">Categorías</h2>
+
+        <ul  class="categorias-lista" id="listaCategorias"></ul>
+
+     </nav>
+    
+        <div class="contenido-principal">
+
+            <h2 class="titulo-productos">Celulares</h2>
+            <section class="productos-destacados" id="productosCategoria1"></section>
+        </div>
+
+    </main>
+    <footer class="footer">
+
+        <ul class="nombres">
+            <li>Mateo Cespedes</li>
+            <li>Martin Decillo</li>
+            <li>Nicolas Sanchez</li>
+        </ul>
+    </footer>
+
+    
+    <script src="./js/logout.js"></script>
+    <script src="./js/saludo.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+</html>
