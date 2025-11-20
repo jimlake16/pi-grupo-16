@@ -12,10 +12,10 @@
 
     <a href="/index.html" class="logo"><span>Azul y Oro <br> Store</span></a>
        
-     <form class="buscador" action="search-results.html" method="get">
-            <input type="text" placeholder="Buscar productos...">
-            <button type="submit">Buscar</button>
-     </form>
+    <form class="buscador" action="search-results.html" method="get">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+    </form>
 
     <div class="auth-buttons">
       <nav>
@@ -26,36 +26,35 @@
     
   </header>
 
-
   <div class="login-register-contenido"> 
-
-    <form action="login.html" method="GET">
+    <form id="registerForm">
 
         <h2>Registrarse</h2>
 
-      <div>
-        <input type="email" name="email" value="" placeholder="Email" required>
-      </div>
+        <div>
+            <input type="email" id="email" name="email" placeholder="Email">
+        </div>
 
-      <div>
-        <input type="password" name="password" value="" placeholder="Contraseña" required>
-      </div>
+        <div>
+            <input type="password" id="password" name="password" placeholder="Contraseña">
+        </div>
 
-      <div>
-        <input type="password" name="repeat-password" value="" placeholder="Repetir contraseña" required>
-      </div>
+        <div>
+            <input type="password" id="repeat-password" name="repeat-password" placeholder="Repetir contraseña">
+        </div>
 
-      <label>
-        <input type="checkbox" name="terms" required>
-        Acepto términos y condiciones
-      </label>
+        <label>
+            <input type="checkbox" id="terms" name="terms">
+            Acepto términos y condiciones
+        </label>
 
-      <div>
-        <button type="submit">Registrarme</button>
+        <p id="errorMessage" class="error"></p>
 
-      </div>
+        <div>
+            <button type="submit">Registrarme</button>
+        </div>
 
-      <p><a href="login.html">Ya tengo una cuenta</a></p>
+        <p><a href="login.html">Ya tengo una cuenta</a></p>
 
     </form>
 
@@ -63,16 +62,15 @@
 
 
   <footer class="footer">
-
-   <ul class="nombres">
-      <li>Mateo Cespedes</li>
-      <li>Martin Decillo</li>
-      <li>Nicolas Sanchez</li>
+    <ul class="nombres">
+        <li>Mateo Cespedes</li>
+        <li>Martin Decillo</li>
+        <li>Nicolas Sanchez</li>
     </ul>
-
   </footer>
 
- 
-  <script src="./js/index.js"></script>
+  <script src="./js/register.js"></script>
+  <script src="./js/register.js"></script>
+
 </body>
 </html>
