@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const searchForm = document.querySelector(".buscador");
     const searchInput = searchForm.querySelector("input");
-    const productsSection = document.getElementById("resultsContainer");
-    const titleElement = document.getElementById("searchTitle");
+    const productsSection = document.querySelector("#resultsContainer");
+    const titleElement = document.querySelector("#searchTitle");
 
     // Loader
     const loader = "<p style='font-weight:bold'>Cargando resultados...</p>";
