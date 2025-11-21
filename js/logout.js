@@ -1,17 +1,41 @@
-let logout = document.querySelector("#logIrse");
+if (localStorage.info) {
+    
+    let logout = document.querySelector("#logIrse");
 
-if (logout) {
+   
+    let sacarRegister = document.querySelector(".register")
+    sacarRegister.style.display = "none"
 
-    logout.addEventListener("click",function(e){
-        e.preventDefault();
 
-        // Eliminar usuario del storage 
-        localStorage.removeItem("info");
-        localStorage.removeItem("emailUsuario");
+
+    
+    if (logout)
         
-        // Recargar la página
-         this.submit();
+        logout.addEventListener("click",function(e){
+        e.preventDefault();
+            
+        // Mostrar de nuevo los auth-buttons originales
+        let mostrarlogin = document.querySelector("#loginPrincipal");
+        let mostrarregister = document.querySelector(".register");
+        
+        if (mostrarlogin) mostrarlogin.style.display = "inline-block";
+        if (mostrarregister) mostrarregister.style.display = "inline-block";
+
+       
+        localStorage.clear(); 
+
+        // Redirigir a index.html 
+        window.location.href = "./index.html";
+
+       
+
     });
 
+    }else{
+
+    let logout = document.querySelector("#logIrse");
+    logout.style.display = "none"
 
 }
+ 
+
