@@ -70,7 +70,7 @@ if (category1) {
                                 <h2>${producto1.title}</h2>
                                 <p>${producto1.description}</p>
                                 <p>$ ${producto1.price}</p>
-                                <div><a href="./product.html?id=${producto1.id}">Ver detalle</a></div>
+                                <div><a class="ver-mas" href="./product.html?id=${producto1.id}">Ver detalle</a></div>
                               </article>`;
             }
 
@@ -101,7 +101,7 @@ if (category2) {
                                 <h2>${producto2.title}</h2>
                                 <p>${producto2.description}</p>
                                 <p>$ ${producto2.price}</p>
-                                <div><a href="./product.html?id=${producto2.id}">Ver detalle</a></div>
+                                <div><a class="ver-mas" href="./product.html?id=${producto2.id}">Ver detalle</a></div>
                               </article>`;
             }
 

@@ -30,7 +30,7 @@ fetch(`https://dummyjson.com/products/${id}`)
 
         let categ = document.querySelector("#categ");
 
-        categ.innerHTML = "<strong>Categoría: </strong> <a href='category.html?category=" + data.category + "' style='text-decoration: none; color: black;'>" + data.category + "</a>";
+        categ.innerHTML = "<strong>Categoría: </strong> <a href='category.html?categoria=" + data.category + "' style='text-decoration: none; color: black;'>" + data.category + "</a>";
 
 
         let stock = document.querySelector("#stock");
