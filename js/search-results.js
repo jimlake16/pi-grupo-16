@@ -1,83 +1,69 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
     const searchForm = document.querySelector(".buscador");
     const searchInput = searchForm.querySelector("input");
     const productsSection = document.getElementById("resultsContainer");
     const titleElement = document.getElementById("searchTitle");
 
-    // Crear loader
-    const loader = document.createElement("p");
-    loader.textContent = "Cargando resultados...";
-    loader.style.fontWeight = "bold";
+    // Loader
+    const loader = "<p style='font-weight:bold'>Cargando resultados...</p>";
 
-    // Obtener término de búsqueda desde URL
+    // Detectar término inicial en la URL
     const urlParams = new URLSearchParams(window.location.search);
     const initialTerm = urlParams.get("q");
     if (initialTerm) {
-    searchInput.value = initialTerm;
-    searchProducts(initialTerm);
-}
-
-    // Función para buscar productos
-    async function searchProducts(term) {
-        productsSection.innerHTML = "";
-        titleElement.textContent = `Resultados de búsqueda para: ${term}`;
-        productsSection.appendChild(loader);
-
-        try {
-            const response = await fetch(`https://dummyjson.com/products/search?q=${encodeURIComponent(term)}`);
-            const data = await response.json();
-            productsSection.removeChild(loader);
-
-            if (!data.products || data.products.length === 0) {
-                titleElement.textContent = `No se encontraron resultados para: ${term}`;
-                return;
-            }
-
-            data.products.forEach(product => {
-                const article = document.createElement("article");
-
-                const img = document.createElement("img");
-                img.src = product.thumbnail;
-                img.alt = product.title;
-
-                const h4 = document.createElement("h4");
-                h4.textContent = product.title;
-
-                const desc = document.createElement("p");
-                desc.textContent = product.description;
-
-                const price = document.createElement("div");
-                price.className = "precio";
-                price.textContent = `$${product.price}`;
-
-                const link = document.createElement("a");
-                link.className = "ver-mas";
-                link.href = `/product.html?id=${product.id}`;
-                link.textContent = "Ver más";
-
-                article.appendChild(img);
-                article.appendChild(h4);
-                article.appendChild(desc);
-                article.appendChild(price);
-                article.appendChild(link);
-
-                productsSection.appendChild(article);
-            });
-
-        } catch (error) {
-            console.error("Error al buscar productos:", error);
-            productsSection.removeChild(loader);
-            titleElement.textContent = "Ocurrió un error al buscar los productos.";
-        }
+        searchInput.value = initialTerm;
+        searchProducts(initialTerm);
     }
 
-    // Evento submit del formulario
-    searchForm.addEventListener("submit", (e) => {
+    function searchProducts(term) {
+        productsSection.innerHTML = loader;
+        titleElement.textContent = "Resultados de búsqueda para: " + term;
+
+        fetch("https://dummyjson.com/products/search?q=" + term)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                const productos = data.products;
+
+                if (!productos || productos.length === 0) {
+                    productsSection.innerHTML = "";
+                    titleElement.textContent = "No se encontraron resultados para: " + term;
+                    return;
+                }
+
+    
+                let html = "";
+                for (let i = 0; i < productos.length; i++) {
+                    const p = productos[i];
+                    html += "<article>" +
+                                "<img src='" + p.thumbnail + "' alt='" + p.title + "'>" +
+                                "<h4>" + p.title + "</h4>" +
+                                "<p>" + p.description + "</p>" +
+                                "<div class='precio'>$" + p.price + "</div>" +
+                                "<a class='ver-mas' href='/product.html?id=" + p.id + "'>Ver más</a>" +
+                            "</article>";
+                }
+
+                productsSection.innerHTML = html;
+            })
+            .catch(function(error) {
+                console.log("Error al buscar productos:", error);
+                productsSection.innerHTML = "";
+                titleElement.textContent = "Ocurrió un error al buscar los productos.";
+            });
+    }
+
+    // Evento submit
+    searchForm.addEventListener("submit", function(e) {
         e.preventDefault();
-        const term = searchInput.value.trim();
+        const term = searchInput.value;
+
         if (term) {
             searchProducts(term);
-            window.history.replaceState({}, "", `?q=${encodeURIComponent(term)}`);
+            window.location.href = "?q=" + term;
+        } else {
+            alert("Escriba un término de búsqueda.");
         }
     });
 });
