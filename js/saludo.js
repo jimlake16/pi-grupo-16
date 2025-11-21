@@ -1,26 +1,22 @@
-// recuperar info de st
+// recuperar info de l storage
 let data = localStorage.getItem("info");
 
-// convertir los datos en OBJ
-let dataObj = JSON.parse(data);
-
-console.log(dataObj);
-
 // recuperar elementos del DOM
-let saludo = document.querySelector("#cat1");
-
-
+let saludo = document.querySelector("#nombre");
 // preguntar si los datos existen
-if (dataObj) {
-   
-//Modificar textos en el dom
-saludo.innerText = `Bienvenido   ${dataObj.email}`;
-
-//Modificar HTML en el dom
-lista.innerHTML = ` <li><a href="./index.html">Mi perfil</a></li>
-                    <li><a href="./login.html">Logout</a></li>`;
+if (data) {
+    // convertir los datos en OBJ
+    let dataObj = JSON.parse(data);
+    
+    // Modificar textos en el dom
+    if (saludo) {
+        saludo.innerText = `Bienvenido: ${dataObj.email}`;
+      
+        this.submit();
+    }
 
 } else {
-  alert("No se pudo guardar los datos correctamente")
+
+    alert("No se pudo guardar los datos correctamente")
 }
 

@@ -1,16 +1,17 @@
-const linkLogout = document.querySelector("#logout");
+let logout = document.querySelector("#logIrse");
 
-if (linkLogout) {
-    linkLogout.addEventListener("click", (e) => {
+if (logout) {
+
+    logout.addEventListener("click",function(e){
         e.preventDefault();
 
-        // Eliminar usuario del storage //
-        let dataObj = JSON.parse(data);
-
-        localStorage.removeItem("dataObj");
-
-        // Recargar la página //
-        location.reload();
+        // Eliminar usuario del storage 
+        localStorage.removeItem("info");
+        localStorage.removeItem("emailUsuario");
+        
+        // Recargar la página
+         this.submit();
     });
-    
+
+
 }
