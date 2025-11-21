@@ -5,9 +5,12 @@ if (linkLogout) {
         e.preventDefault();
 
         // Eliminar usuario del storage //
-        localStorage.removeItem("emailUsuario");
+        let dataObj = JSON.parse(data);
+
+        localStorage.removeItem("dataObj");
 
         // Recargar la página //
         location.reload();
     });
+    
 }

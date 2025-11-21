@@ -30,9 +30,19 @@ validarForm.addEventListener("submit", function(e){
         return;
   }
 
-  
+// Si todo está correcto, guarda en local storage
+    localStorage.setItem("emailUsuario", email);
+    console.log("Email guardado en login:", email);
 
-  // Guardar email en storage
-  localStorage.setItem("emailUsuario", email);
- });
+    // info a objeto
+    let userObj = {
+        email: email,
+        password: password
+    };
 
+    // Guardar en localStorage
+    localStorage.setItem("info", JSON.stringify(userObj));
+
+b    // Redirigir al index
+    this.submit();
+});

@@ -1,23 +1,26 @@
-// Obtener email del usuario
-let userEmail = localStorage.getItem("emailUsuario");
+// recuperar info de st
+let data = localStorage.getItem("info");
 
-// Referencias DOM
-let saludo = document.querySelector("#saludo-usuario");
-let linkLogout = document.querySelector("#logout");
-let linkLogin = document.querySelector("#linkLogin");
-let linkRegister = document.querySelector("#linkRegistro");
+// convertir los datos en OBJ
+let dataObj = JSON.parse(data);
 
-// Para usuario logueado
-if (userEmail) {
-    if (saludo) saludo.textContent = `Bienvenido: ${userEmail}`;
-    if (linkLogout) linkLogout.style.display = "inline-block";
-    if (linkLogin) linkLogin.style.display = "none";
-    if (linkRegister) linkRegister.style.display = "none";
-} 
-// Para usuario no logueado
-else {
-    if (saludo) saludo.textContent = "";
-    if (linkLogout) linkLogout.style.display = "none";
-    if (linkLogin) linkLogin.style.display = "inline-block";
-    if (linkRegister) linkRegister.style.display = "inline-block";
+console.log(dataObj);
+
+// recuperar elementos del DOM
+let saludo = document.querySelector("#cat1");
+
+
+// preguntar si los datos existen
+if (dataObj) {
+   
+//Modificar textos en el dom
+saludo.innerText = `Bienvenido   ${dataObj.email}`;
+
+//Modificar HTML en el dom
+lista.innerHTML = ` <li><a href="./index.html">Mi perfil</a></li>
+                    <li><a href="./login.html">Logout</a></li>`;
+
+} else {
+  alert("No se pudo guardar los datos correctamente")
 }
+
